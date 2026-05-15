@@ -293,10 +293,6 @@ DOUBLE PRECISION :: c_min, cons, u_fun_c, u_fun_n, argument
 c_min = 1d-10
 cons = MAX(c,c_min)
 
-! CLUSTER_NOTE: even though here it seems that we have flexibility to move away from GHH preferences, that is not true in the current version:
-! the reason is that the solution of the "private sector problem" uses the result coming from the GHH: labor supply depends only on the wage, and
-! *not* on the consumption level (i.e., there is no wealth effect).
-! So: can't really change ghh_indicator from its current value of 1.
 
 IF (c <= 0d+0.or.n<=0d+0.or.n>1d+0) THEN
    u_fun = -1000d+0
