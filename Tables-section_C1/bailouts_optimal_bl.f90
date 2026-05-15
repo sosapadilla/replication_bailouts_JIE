@@ -2374,7 +2374,7 @@ DO j=1,sample_num   !SOLVE FOR SAMPLE j
             END IF
 
             pi_firm(i,j) = (1d+0-alpha)* y(i,j)
-                        rr(i,j) = r0_matrix(i_b_current, i_y_current, i_e_current, i_crisis_current)
+            rr(i,j) = r0_matrix(i_b_current, i_y_current, i_e_current, i_crisis_current)
             loan(i,j)= loan0_matrix(i_b_current, i_y_current, i_e_current, i_crisis_current)
             
             cons_bank(i,j) = trans(i,j) + loan(i,j) * rr(i,j) + &
@@ -2803,8 +2803,7 @@ SUBROUTINE init_random_seed()
   CALL RANDOM_SEED(size = n)
   ALLOCATE(seed(n))
 
-  !ivalue=139719 -- This is what I had in the JMP
-  seed = 139719
+    seed = 139719
   !          WRITE(*,*) seed,n
 
   CALL RANDOM_SEED(PUT = seed)

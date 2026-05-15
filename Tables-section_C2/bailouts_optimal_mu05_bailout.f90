@@ -2632,8 +2632,7 @@ SUBROUTINE init_random_seed()
   CALL RANDOM_SEED(size = n)
   ALLOCATE(seed(n))
 
-  !ivalue=139719 -- This is what I had in the JMP
-  seed = 139719
+    seed = 139719
   !          WRITE(*,*) seed,n
 
   CALL RANDOM_SEED(PUT = seed)

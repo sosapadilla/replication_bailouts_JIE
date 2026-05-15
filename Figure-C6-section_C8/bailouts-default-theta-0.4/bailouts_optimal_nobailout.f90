@@ -2309,8 +2309,7 @@ DO j=1,sample_num   !SOLVE FOR SAMPLE j
 
             b(i+1,j) = b_grid(i_b_next)
             q(i,j)   = q_fun(i_b_next, i_y_current)  !q_paid -- Can probably just READ it.
-            !spread_ss(i,j) =(1/q(i,j))-(1/q_fun_nodef(i_b_next, i_y_current))
-            spread_ss(i,j) =(1/q(i,j))-(1/beta_bank)
+                        spread_ss(i,j) =(1/q(i,j))-(1/beta_bank)
             tax(i,j) = tax0_matrix(i_b_current, i_y_current, i_e_current, i_crisis_current)
             nn(i,j) = labor0_matrix(i_b_current, i_y_current, i_e_current, i_crisis_current)
             y(i,j) = EXP(z(i,j))*nn(i,j)**(alpha)
@@ -2425,8 +2424,7 @@ DO j=1,sample_num   !SOLVE FOR SAMPLE j
             b(i+1,j) = b_grid(i_b_next)
             q(i,j) = q_fun(i_b_next, i_y_current)  !q_paid
             
-            !spread_ss(i,j) =(1/q(i,j))-(1/q_fun_nodef(i_b_next, i_y_current))
-            spread_ss(i,j) =(1/q(i,j))-(1+rw)
+                        spread_ss(i,j) =(1/q(i,j))-(1+rw)
             tax(i,j) = tax0_matrix(i_b_current, i_y_current, i_e_current, i_crisis_current)
             nn(i,j) = labor0_matrix(i_b_current, i_y_current, i_e_current, i_crisis_current)
             y(i,j) = EXP(z(i,j))*nn(i,j)**(alpha)
@@ -2842,8 +2840,7 @@ SUBROUTINE init_random_seed()
   CALL RANDOM_SEED(size = n)
   ALLOCATE(seed(n))
 
-  !ivalue=139719 -- This is what I had in the JMP
-  seed = 139719
+    seed = 139719
   !          WRITE(*,*) seed,n
 
   CALL RANDOM_SEED(PUT = seed)

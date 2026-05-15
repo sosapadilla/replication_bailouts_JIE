@@ -2726,8 +2726,7 @@ SUBROUTINE simulate
                     b(i+1,j) = b_grid(i_b_next)
                     k(i+1,j) = k_grid(i_k_next)
                     q(i,j)   = q_fun(i_b_next, i_k_next, i_y_current)  !q_paid -- Can probably just READ it.
-                    !spread_ss(i,j) =(1/q(i,j))-(1/q_fun_nodef(i_b_next, i_y_current))
-                    !spread_ss(i,j) =(1d+0/(q(i,j)*(1+rf_rate))-1d+0)*(mrate+rf_rate)
+                                        !spread_ss(i,j) =(1d+0/(q(i,j)*(1+rf_rate))-1d+0)*(mrate+rf_rate)
                     ytm_bond(i,j)= mrate*((1d+0/q(i,j))-1d+0)+(1d+0-mrate)*coupon/q(i,j)
                     ytm_free(i,j) =rloan_next(i_b_next,i_k_next, i_y_current)*(1d+0+rf_rate)-1d+0
                     spread_ss(i,j) = ytm_bond(i,j)-ytm_free(i,j)
@@ -2862,8 +2861,7 @@ SUBROUTINE simulate
                     k(i+1,j) = k_grid(i_k_next)
                     q(i,j) = q_fun(i_b_next, i_k_next, i_y_current)  !q_paid
 
-                    !spread_ss(i,j) =(1/q(i,j))-(1/q_fun_nodef(i_b_next, i_y_current))
-                    !spread_ss(i,j) =(1d+0/(q(i,j)*(1d+0+rf_rate))-1d+0)*(mrate+rf_rate)
+                                        !spread_ss(i,j) =(1d+0/(q(i,j)*(1d+0+rf_rate))-1d+0)*(mrate+rf_rate)
 
                     ytm_bond(i,j)= mrate*((1d+0/q(i,j))-1d+0)+(1d+0-mrate)*coupon/q(i,j)
                     ytm_free(i,j) =rloan_next(i_b_next, i_k_next, i_y_current)*(1d+0+rf_rate)-1d+0
@@ -3114,8 +3112,7 @@ SUBROUTINE init_random_seed()
   CALL RANDOM_SEED(size = n)
   ALLOCATE(seed(n))
 
-  !ivalue=139719 -- This is what I had in the JMP
-  seed = 139719
+    seed = 139719
   !          WRITE(*,*) seed,n
 
   CALL RANDOM_SEED(PUT = seed)
