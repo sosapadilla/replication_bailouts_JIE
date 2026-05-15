@@ -1023,7 +1023,6 @@ convergence = -1d+0
 exit_flag = 0d+0
 transfer_effective = (1d+0 - d) * ((1d+0 - bc) *  0d+0 + bc * transfer_global) + d * 0d+0 
 
-! rev_needed = gov_spending + (1d+0-d)* (b_initial + transfer_effective -b_grid(i_b_next)*q_fun(i_b_next, i_y_global))
 rev_needed = gov_spending + (1d+0-d)* (b_initial + transfer_effective -b_grid(i_b_next)*q_vector(i_b_next, i_y_global))
 
 counter=1
