@@ -1,5 +1,5 @@
-! Code for "Sovereign Defaults and Banking Crises" (Sosa-Padilla, 2015 version)
-! Adapated to avoid using ISML. It's ready to be used w/ gfortran.
+! Code for "Optimal Bailouts in Banking and Sovereign Crises" (Hur, Sosa-Padilla and Yom)
+!
 module param
 
 IMPLICIT NONE
