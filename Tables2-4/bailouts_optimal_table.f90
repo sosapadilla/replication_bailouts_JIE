@@ -2422,8 +2422,7 @@ DO j=1,sample_num   !SOLVE FOR SAMPLE j
             END IF
 
             pi_firm(i,j) = (1d+0-alpha)* y(i,j)
-            ! rr(i,j) = r_fun(nn(i,j)) ! requires b_initial, i_default_global, transfer_global
-            rr(i,j) = r0_matrix(i_b_current, i_y_current, i_e_current, i_crisis_current)
+                        rr(i,j) = r0_matrix(i_b_current, i_y_current, i_e_current, i_crisis_current)
             loan(i,j)= loan0_matrix(i_b_current, i_y_current, i_e_current, i_crisis_current)
             
             cons_bank(i,j) = trans(i,j) + loan(i,j) * rr(i,j) + &
