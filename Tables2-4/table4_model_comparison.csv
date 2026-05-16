@@ -1,0 +1,8 @@
+statistic,baseline_unconditional,baseline_banking_crisis,without_bailouts_unconditional,without_bailouts_banking_crisis
+Default frequency,    0.490972,    0.744059,    0.334114,    0.326475
+Sovereign spread mean,    0.518857,    0.807174,    0.337958,    0.345520
+Sovereign spread sd,    0.663862,    1.098299,    0.506329,    0.465190
+Debt/GDP,   15.600992,   15.902747,   26.921259,   26.918388
+Mean lending rate,    0.011103,    0.004456,    0.217224,    0.334284
+Welfare gain of bailouts,   -1.483911,,,
+Units: percent. * denotes targeted moments.

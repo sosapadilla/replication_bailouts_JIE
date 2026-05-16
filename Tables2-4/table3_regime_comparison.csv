@@ -1,0 +1,11 @@
+table,panel,statistic,value
+Table 3,Unconditional,Default frequency (%),        0.49097174
+Table 3,Unconditional,Sovereign spread mean (%),        0.51885697
+Table 3,Unconditional,Sovereign spread sd (%),        0.66386172
+Table 3,Unconditional,Debt/GDP (%),       15.60099221
+Table 3,Unconditional,Bailout/GDP (%),        0.89925496
+Table 3,Banking crisis,Default frequency (%),        0.74405892
+Table 3,Banking crisis,Sovereign spread mean (%),        0.80717426
+Table 3,Banking crisis,Sovereign spread sd (%),        1.09829942
+Table 3,Banking crisis,Debt/GDP (%),       15.90274658
+Table 3,Banking crisis,Bailout/GDP (%),        1.67745885

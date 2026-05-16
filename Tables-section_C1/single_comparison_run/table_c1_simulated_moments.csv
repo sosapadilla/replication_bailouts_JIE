@@ -1,0 +1,8 @@
+Statistic,No_bailouts,Bailouts_during_default
+"Default frequency",0.0872501723,0.5003445899
+"Sovereign spread mean",0.0940439809,0.5373118188
+"Sovereign spread standard deviation",0.1821482949,0.8354232302
+"corr(GDP, spread)",-0.6016492243,-0.6610975169
+"Debt/GDP",57.1183282353,18.1340669702
+"Mean lending rate",0.0993755134,0.2003761087
+"Welfare gain of bailouts",NaN,-2.2804477534

@@ -1,0 +1,12 @@
+table,statistic,model_value
+Table 2,Default frequency (%),        0.4909717436
+Table 2,Banking crisis frequency (%),        1.7549633578
+Table 2,Government spending/GDP (%),       19.1802165699
+Table 2,Bailouts/GDP | banking crisis (%),        1.6774588527
+Table 2,Sovereign spread mean (%),        0.5188569699
+Table 2,Sovereign spread sd (%),        0.6638617169
+Table 2,corr(spread y),       -0.2737993074
+Table 2,Debt/GDP (%),       15.6009922106
+Table 2,corr(bailouts debt),       -0.3365836469
+Table 2,Bailout-output multiplier,        1.4827747984
+Table 2,Banking sector loss (%),       25.1038448423
