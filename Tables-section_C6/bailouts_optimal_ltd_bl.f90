@@ -51,22 +51,12 @@ DOUBLE PRECISION, PARAMETER :: rho = 0.8, &
 !----------------------------------------------- 
 !AR(1) estimates for log(TFP)                    
 !-----------------------------------------------  
-!Argentina (1990-2010) -- From Cesar's JMP
-!Rho                          = 0.7631 
-!Std eps                      = 0.0262 
 
-! theta= weight of the hh-value function into the planner's objective function.
-! theta==1 means only hh is relevant; theta==0 means only banker is relevant.
-! prob_excxlusion_ends -- re-entry probability
-! lambda -- exogenous cost of default
 
 DOUBLE PRECISION :: beta_bank = 0.96d+0, ghh_indicator = 1d+0, omega = 2.5d+0, sigma_c = 2d+0, &
     sigma_n = 2d+0, chi = 0.01d+0, alpha = 0.7d+0, r_min = 0.0d+0, gamma_firm = 0.52d+0, &
     m_NX = 0d+0, gamma_bank = 1d+0, rf_rate, mrate = 1.0d+0, coupon
 
-!gamma_firm = 0.52 (average from full sample, look at argentina_data.xls)
-!gov_spending = 0.0934 (target g/y = 11.37%)
-!Latest version has m_NX==0. It used to be m_NX = 0.1357 (target (inv+nx)/y = 16.52%).
 
 DOUBLE PRECISION :: tax_lp_and_default, tax_repay, deviation, dev_q
 
@@ -1594,8 +1584,6 @@ DO WHILE(convergence<0)
    WRITE(nout, *) iteration, deviation, dev_q, dev_b
    
    !3) SAVE RESULTS OF THE CURRENT ITERATION
-   ! @@@ CLUSTER_NOTE: I WOULD NORMALLY SAVE THE RESULTS FROM THE CURRENT ITERATION HERE. 
-   ! NOW, I WILL MOVE IT TO AFTER CONVERGENCE IS ACHIEVED.
 
    !4) UPDATE VALUES OF MATRICES
    default_decision = default_decision_new 
@@ -1883,7 +1871,6 @@ IF (writeout.EQ.1) THEN
     CLOSE (2)
 ENDIF
 
-! @@@ CLUSTER_NOTE: IF WE SET indicator_external to zero, THEN it solves the model from scratch.
 ! Setting it larger than 0.5 will make the code READ from outside files --> useful for:
 ! i) Just simulate without waiting for the code to converfe
 ! ii) Try to achieve convergence from a "well informed guess".

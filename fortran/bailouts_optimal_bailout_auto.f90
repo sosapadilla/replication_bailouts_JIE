@@ -52,14 +52,7 @@ DOUBLE PRECISION, PARAMETER	:: 	rho = 0.8,	&
 !----------------------------------------------- 
 !AR(1) estimates for log(TFP)                    
 !-----------------------------------------------  
-!Argentina (1990-2010) -- From Cesar's JMP
-!Rho                          = 0.7631 
-!Std eps                      = 0.0262 
 
-! theta= weight of the hh-value function into the planner's objective function.
-! theta==1 means only hh is relevant; theta==0 means only banker is relevant.
-! prob_excxlusion_ends -- re-entry probability
-! lambda -- exogenous cost of default
 
 DOUBLE PRECISION ::beta_bank, ghh_indicator, omega, sigma_c, sigma_n, chi, alpha, r_min, &
 gamma_firm, m, gamma_bank, rf_rate, mrate, coupon
@@ -1459,8 +1452,6 @@ DO WHILE(convergence<0)
    WRITE(nout, *) iteration, deviation, dev_q
    
    !3) SAVE RESULTS OF THE CURRENT ITERATION
-   ! @@@ CLUSTER_NOTE: I WOULD NORMALLY SAVE THE RESULTS FROM THE CURRENT ITERATION HERE. 
-   ! NOW, I WILL MOVE IT TO AFTER CONVERGENCE IS ACHIEVED.
 
    !4) UPDATE VALUES OF MATRICES
    default_decision = default_decision_new 
@@ -1773,7 +1764,6 @@ IF (writeout.EQ.1) THEN
 	CLOSE (2)
 ENDIF
 
-! @@@ CLUSTER_NOTE: IF WE SET indicator_external to zero, THEN it solves the model from scratch.
 ! Setting it larger than 0.5 will make the code READ from outside files --> useful for:
 ! i) Just simulate without waiting for the code to converfe
 ! ii) Try to achieve convergence from a "well informed guess".

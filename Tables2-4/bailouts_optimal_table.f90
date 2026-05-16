@@ -1455,8 +1455,6 @@ DO WHILE(convergence<0)
    WRITE(nout, *) iteration, deviation, dev_q
    
    !3) SAVE RESULTS OF THE CURRENT ITERATION
-   ! @@@ CLUSTER_NOTE: I WOULD NORMALLY SAVE THE RESULTS FROM THE CURRENT ITERATION HERE. 
-   ! NOW, I WILL MOVE IT TO AFTER CONVERGENCE IS ACHIEVED.
 
    !4) UPDATE VALUES OF MATRICES
    default_decision = default_decision_new 
