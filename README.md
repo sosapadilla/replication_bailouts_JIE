@@ -259,7 +259,7 @@ The folder contains its own `README.md`. From the supplied files, the final figu
 
 ## Important Notes About Saved Outputs
 
-- Many folders already contain compiled executables, solver text outputs, generated CSV files, and figure exports. These are included so that users can inspect or redraw results without rerunning every heavy computation.
+<!-- - Many folders already contain compiled executables, solver text outputs, generated CSV files, and figure exports. These are included so that users can inspect or redraw results without rerunning every heavy computation. -->
 - Several MATLAB runners create or reuse `nb_files/` subdirectories. These store the no-bailout benchmark objects used by the bailout run when computing welfare gains.
 - macOS metadata files such as `.DS_Store` can be ignored.
 
@@ -279,9 +279,9 @@ The folder contains its own `README.md`. From the supplied files, the final figu
 ## Notes for Replicators
 
 - The code has been tested primarily on macOS.
-- If you only want to regenerate figures from saved outputs, you can often skip the Fortran runs and execute only the MATLAB or Stata plotting scripts.
+<!-- - If you only want to regenerate figures from saved outputs, you can often skip the Fortran runs and execute only the MATLAB or Stata plotting scripts. -->
 - The sensitivity and figure folders under Appendix C.4–C.8 are intentionally modular. Each folder contains the local Fortran files and runner needed for that exercise.
-- Some appendix workflows are computationally heavy when rebuilt from scratch. Where saved run directories are already present, plotting-only workflows are usually much faster.
+<!-- - Some appendix workflows are computationally heavy when rebuilt from scratch. Where saved run directories are already present, plotting-only workflows are usually much faster. -->
 
 
 ## Contact
