@@ -1765,7 +1765,7 @@ IF (writeout.EQ.1) THEN
 ENDIF
 
 ! Setting it larger than 0.5 will make the code READ from outside files --> useful for:
-! i) Just simulate without waiting for the code to converfe
+! i) Just simulate without waiting for the code to converge
 ! ii) Try to achieve convergence from a "well informed guess".
 
 indicator_lumpsum = 0d+0
