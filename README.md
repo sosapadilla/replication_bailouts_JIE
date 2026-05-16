@@ -1,5 +1,5 @@
 # Replication Package: "Optimal Bailouts in Banking and Sovereign Crises"
-*by Sewon Hur, Zeynep Yom, and Cesar Sosa-Padilla*
+*by Sewon Hur, Zeynep Yom, and Cesar Sosa-Padilla*<br>
 *Forthcoming in the Journal of International Economics*
 
 ## Overview
